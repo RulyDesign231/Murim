@@ -2,15 +2,22 @@
 
 A browser-local, deterministic life simulation vertical slice built with React, TypeScript and the Next.js-compatible Vinext runtime.
 
-## Run
+## Run locally
 
-- `npm ci`
-- `npm run dev`
+Requires Node.js 22.13 or newer.
+
+1. Run `npm ci`.
+2. Run `npm run dev`.
+3. Open `http://127.0.0.1:5173` (or `http://localhost:5173`).
+
+The normal local command now starts Vite directly, avoiding the environment-dependent framework launcher. If you specifically need the original portable Vinext launcher, use `npm run dev:portable`.
+
+For isolated browser QA, append `?playtest=1`; that uses a separate save key.
+
+Other checks:
 - `npm run build`
 - `node node_modules/typescript/bin/tsc --noEmit`
 - `node scripts/test-game.mjs`
-
-Open `http://localhost:5173`. For isolated browser QA, append `?playtest=1`; that uses a separate save key.
 
 ## Architecture
 
